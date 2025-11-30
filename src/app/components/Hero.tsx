@@ -24,7 +24,7 @@ const Hero = () => {
     }, []);
 
     return (
-        <section className="relative min-h-screen bg-gradient-to-br overflow-hidden sm:mt-10">
+        <section className="relative min-h-screen bg-gradient-to-br overflow-hidden ">
             {/* Ambient background effects */}
             <div className="absolute inset-0 opacity-30">
                 <div className="absolute  left-20 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl"></div>
