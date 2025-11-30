@@ -111,11 +111,11 @@ const Hero = () => {
                         >
 
                             <div className='flex flex-row gap-4 pt-4 flex-wrap'>
-                                <div className='bg-slate-800 p-2 rounded-full'><Instagram /></div>
-                                <div className='bg-slate-800 p-2 rounded-full'><Github /></div>
-                                <div className='bg-slate-800 p-2 rounded-full'><Facebook /></div>
-                                <div className='bg-slate-800 p-2 rounded-full'><Mail /></div>
-                                <div className='bg-slate-800 p-2 rounded-full'><Phone /></div>
+                                <div className='bg-slate-800 p-2 rounded-full text-amber-50'><Instagram /></div>
+                                <div className='bg-slate-800 p-2 rounded-full text-amber-50'><Github /></div>
+                                <div className='bg-slate-800 p-2 rounded-full text-amber-50'><Facebook /></div>
+                                <div className='bg-slate-800 p-2 rounded-full text-amber-50'><Mail /></div>
+                                <div className='bg-slate-800 p-2 rounded-full text-amber-50'><Phone /></div>
 
                             </div>
                         </motion.div>
