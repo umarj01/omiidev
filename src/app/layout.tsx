@@ -2,8 +2,7 @@
 import type { Metadata } from 'next'
 import './globals.css'
 import Nav from './nav'
-import { ThemeProvider } from 'next-themes'
-import ModeToggle from '@/components/ui/darkMode'
+
 
 export const metadata: Metadata = {
   title: 'Umar Javaid - Cybersecurity Expert, Web Developer & Educator',
@@ -35,18 +34,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="scroll-smooth scroll-p-20 ">
-      <body className="antialiased  dark:bg-slate-950">
+      <body className="antialiased bg-slate-950">
      
-     <ThemeProvider attribute="class"
-            defaultTheme="system"
-            enableSystem
-            disableTransitionOnChange>
+     
 <Nav/>
-
         {children}
-     </ThemeProvider>
-        
-       
+
       </body>
     </html>
   )

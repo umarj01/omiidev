@@ -2,7 +2,7 @@
 "use client"
  
 import * as React from "react"
-import { ThemeProvider as NextThemesProvider } from "next-themes"
+
 
 
 
@@ -17,15 +17,12 @@ import CTA from './components/CTA'
 import Footer from './components/Footer'
 import Testimonials from './components/Testimonials'
 
-export default function Home({
-  children,
-  ...props
-}: React.ComponentProps<typeof NextThemesProvider>) {
+export default function Home() {
   return (
     <div className="flex min-h-screen flex-col">
       {/* <Header /> */}
       <main className="flex-1">
-        <NextThemesProvider {...props}>{children}</NextThemesProvider>
+
         <Hero />
         <Skills />
         <Testimonials />

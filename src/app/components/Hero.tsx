@@ -39,14 +39,14 @@ const Hero = () => {
                         initial={{ opacity: 0, x: -50 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.8 }}
-                        className="space-y-2 order-1"
+                        className="space-y-2 order-1 "
                     >
                         {/* Greeting */}
                         <motion.p
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             transition={{ delay: 0.3 }}
-                            className="text-shadow-gray-400 text-lg md:text-xl ml-1 tracking-wide"
+                            className="text-white text-lg md:text-xl ml-1 tracking-wide"
                         >
                             Hey, I am <span className="text-blue-500 font-semibold">Umar Javaid</span>
                         </motion.p>
