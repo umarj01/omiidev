@@ -78,8 +78,139 @@ export default function Skills() {
                         </p>
                     </div>
 
-                    {/* Web Development Section - Enhanced Bento Grid */}
-                  
+                    {/* Web Development Section - Floating 3D Code Cards */}
+                    <div className="mb-20">
+                        <div className="mb-8 flex items-center gap-3">
+                            <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-blue-600 to-cyan-600 shadow-lg shadow-blue-500/30">
+                                <Code2 className="h-6 w-6 text-white" />
+                            </div>
+                            <h3 className="text-2xl font-bold text-white md:text-3xl">
+                                Web Development
+                            </h3>
+                        </div>
+
+                        {/* Connection Lines SVG Background */}
+                        <div className="relative">
+                            <svg className="absolute inset-0 w-full h-full pointer-events-none opacity-20" style={{ zIndex: 0 }}>
+                                <defs>
+                                    <linearGradient id="lineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                                        <stop offset="0%" stopColor="#3b82f6" stopOpacity="0" />
+                                        <stop offset="50%" stopColor="#06b6d4" stopOpacity="1" />
+                                        <stop offset="100%" stopColor="#8b5cf6" stopOpacity="0" />
+                                    </linearGradient>
+                                </defs>
+                                {/* Animated connection lines */}
+                                <line x1="10%" y1="20%" x2="30%" y2="40%" stroke="url(#lineGradient)" strokeWidth="1" className="animate-pulse" />
+                                <line x1="50%" y1="15%" x2="70%" y2="35%" stroke="url(#lineGradient)" strokeWidth="1" className="animate-pulse" style={{ animationDelay: '0.5s' }} />
+                                <line x1="30%" y1="60%" x2="60%" y2="50%" stroke="url(#lineGradient)" strokeWidth="1" className="animate-pulse" style={{ animationDelay: '1s' }} />
+                            </svg>
+
+                            <div className="relative grid gap-6 sm:gap-8 md:grid-cols-2 lg:grid-cols-3" style={{ perspective: '1000px' }}>
+                                {webDevSkills.map((skill, index) => {
+                                    const Icon = skill.icon;
+                                    const isLarge = skill.size === "large";
+
+                                    return (
+                                        <div
+                                            key={index}
+                                            className="web-dev-card group relative"
+                                            style={{
+                                                animationDelay: `${index * 0.1}s`
+                                            }}
+                                        >
+                                            {/* Code Window Header */}
+                                            <div className="relative overflow-hidden rounded-xl border border-slate-700/50 bg-gradient-to-br from-slate-900 via-slate-900/95 to-slate-800/90 backdrop-blur-xl shadow-2xl transition-all duration-500 group-hover:border-cyan-500/50 group-hover:shadow-cyan-500/20 group-hover:shadow-2xl group-hover:-translate-y-2"
+                                                style={{ transformStyle: 'preserve-3d' }}>
+
+                                                {/* Window Controls */}
+                                                <div className="flex items-center gap-2 border-b border-slate-700/50 bg-slate-800/50 px-4 py-2.5">
+                                                    <div className="flex gap-1.5">
+                                                        <div className="h-2.5 w-2.5 rounded-full bg-red-500/80"></div>
+                                                        <div className="h-2.5 w-2.5 rounded-full bg-yellow-500/80"></div>
+                                                        <div className="h-2.5 w-2.5 rounded-full bg-green-500/80"></div>
+                                                    </div>
+                                                    <span className="ml-2 font-mono text-xs text-slate-400">{skill.name}.tsx</span>
+                                                </div>
+
+                                                {/* Card Content */}
+                                                <div className="relative p-6">
+                                                    {/* Line Numbers */}
+                                                    <div className="absolute left-0 top-6 flex flex-col gap-4 border-r border-slate-700/30 bg-slate-800/30 px-3 py-6 font-mono text-xs text-slate-600">
+                                                        <span>01</span>
+                                                        <span>02</span>
+                                                        <span>03</span>
+                                                        {isLarge && <span>04</span>}
+                                                    </div>
+
+                                                    {/* Main Content */}
+                                                    <div className="ml-12 space-y-4">
+                                                        {/* Icon with Gradient */}
+                                                        <div className="flex items-center gap-3">
+                                                            <div className={`relative flex items-center justify-center rounded-lg bg-gradient-to-br ${skill.color} p-3 shadow-lg transition-transform duration-500 group-hover:scale-110 group-hover:rotate-3`}>
+                                                                <Icon className="h-6 w-6 text-white" />
+                                                                {/* Glow effect */}
+                                                                <div className={`absolute inset-0 rounded-lg bg-gradient-to-br ${skill.color} blur-xl opacity-0 transition-opacity duration-500 group-hover:opacity-50`}></div>
+                                                            </div>
+                                                            <div>
+                                                                <h4 className="font-mono text-lg font-bold text-white">
+                                                                    {skill.name}
+                                                                </h4>
+                                                                <p className="font-mono text-xs text-slate-400">{skill.level}</p>
+                                                            </div>
+                                                        </div>
+
+                                                        {/* Code-style skill representation */}
+                                                        <div className="space-y-2 font-mono text-xs">
+                                                            <div className="flex items-center gap-2">
+                                                                <span className="text-purple-400">const</span>
+                                                                <span className="text-blue-400">proficiency</span>
+                                                                <span className="text-slate-400">=</span>
+                                                                <span className={`font-semibold bg-gradient-to-r ${skill.color} bg-clip-text text-transparent`}>
+                                                                    {skill.level === "Expert" ? "100" : skill.level === "Advanced" ? "85" : "70"}%
+                                                                </span>
+                                                            </div>
+
+                                                            {/* Animated Progress Bar */}
+                                                            <div className="mt-3 h-1.5 w-full overflow-hidden rounded-full bg-slate-800">
+                                                                <div
+                                                                    className={`skill-meter h-full rounded-full bg-gradient-to-r ${skill.color} shadow-lg`}
+                                                                    style={{
+                                                                        width: skill.level === "Expert" ? "85%" : skill.level === "Advanced" ? "75%" : "60%"
+                                                                    }}
+                                                                ></div>
+                                                            </div>
+
+                                                            {/* Tags */}
+                                                            <div className="mt-3 flex flex-wrap gap-1.5">
+                                                                <span className={`rounded-md bg-gradient-to-r ${skill.color} px-2 py-0.5 text-[10px] font-medium text-white opacity-80`}>
+                                                                    {isLarge ? "Core" : "Tool"}
+                                                                </span>
+                                                                <span className="rounded-md bg-slate-800 px-2 py-0.5 text-[10px] font-medium text-slate-400">
+                                                                    {skill.level}
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    {/* Hover particles effect */}
+                                                    <div className="absolute right-4 top-4 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
+                                                        <div className="relative h-16 w-16">
+                                                            <div className={`absolute h-2 w-2 rounded-full bg-gradient-to-r ${skill.color} animate-ping`} style={{ top: '0', right: '0' }}></div>
+                                                            <div className={`absolute h-1.5 w-1.5 rounded-full bg-gradient-to-r ${skill.color} animate-ping`} style={{ top: '30%', right: '60%', animationDelay: '0.3s' }}></div>
+                                                            <div className={`absolute h-1 w-1 rounded-full bg-gradient-to-r ${skill.color} animate-ping`} style={{ top: '60%', right: '20%', animationDelay: '0.6s' }}></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                {/* Bottom accent line */}
+                                                <div className={`h-1 w-full bg-gradient-to-r ${skill.color} opacity-0 transition-opacity duration-500 group-hover:opacity-100`}></div>
+                                            </div>
+                                        </div>
+                                    );
+                                })}
+                            </div>
+                        </div>
+                    </div>
 
                     {/* Cyber Security Section - Hexagonal/Diamond Cards */}
                     <div className="mb-20">
