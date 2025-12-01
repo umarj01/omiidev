@@ -124,3 +124,158 @@
     @apply bg-background text-foreground;
   }
 }
+
+
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Base Layer - Global Styles */
+@layer base {
+  body {
+    @apply bg-slate-950 text-white antialiased;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* ===== HERO SECTION ANIMATIONS ===== */
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+  will-change: transform;
+}
+
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 20s linear infinite;
+  will-change: transform;
+}
+
+/* ===== SKILLS SECTION ANIMATIONS ===== */
+
+/* Skill Meter Fill Animation */
+@keyframes skill-fill {
+  0% {
+    width: 0%;
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    width: 85%;
+    opacity: 1;
+  }
+}
+
+.skill-meter {
+  width: 0%;
+  animation: skill-fill 1.5s cubic-bezier(0.65, 0, 0.35, 1) forwards;
+  animation-delay: 0.3s;
+  will-change: width, opacity;
+}
+
+/* Cyber Security Scanning Effect */
+@keyframes scan {
+  0% {
+    top: 0;
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    top: 100%;
+    opacity: 0;
+  }
+}
+
+.scan-line {
+  animation: scan 2s ease-in-out infinite;
+  will-change: top, opacity;
+}
+
+/* Cyber Security Pulse Glow Effect */
+@keyframes pulse-glow {
+
+  0%,
+  100% {
+    box-shadow: 0 0 20px rgba(239, 68, 68, 0.5),
+      0 0 40px rgba(239, 68, 68, 0.2);
+  }
+
+  50% {
+    box-shadow: 0 0 30px rgba(239, 68, 68, 0.8),
+      0 0 60px rgba(239, 68, 68, 0.4);
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+  will-change: box-shadow;
+}
+
+/* ===== PERFORMANCE OPTIMIZATIONS ===== */
+
+/* Optimize transforms and transitions */
+@layer utilities {
+  .gpu-accelerated {
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+  }
+}
+
+/* Smooth transitions for interactive elements */
+.transition-smooth {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ===== CUSTOM SCROLLBAR (Dark Theme) ===== */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgb(15, 23, 42);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(51, 65, 85);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(71, 85, 105);
+}

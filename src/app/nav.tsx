@@ -3,7 +3,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { Menu } from "lucide-react";
 import { Avatar, AvatarImage } from "@/components/ui/avatar";
-import ModeToggle from "@/components/ui/darkMode";
+
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -23,7 +23,7 @@ export default function Nav() {
         {/* Left Section */}
         <div className="flex items-center gap-2 text-xl font-bold font-mono text-white">
           <Avatar>
-            <AvatarImage src="https://github.com/evilrabbit.png" />
+            <AvatarImage src="./avatar.jpg"/>
           </Avatar>
           <Link href="/">Omar Javaid</Link>
         </div>

@@ -13,9 +13,9 @@ import Skills from './components/Skills'
 import BlogPosts from './components/BlogPosts'
 import Pricing from './components/Pricing'
 import Newsletter from './components/Newsletter'
-import CTA from './components/CTA'
+
 import Footer from './components/Footer'
-import Testimonials from './components/Testimonials'
+
 
 export default function Home() {
   return (
@@ -25,11 +25,11 @@ export default function Home() {
 
         <Hero />
         <Skills />
-        <Testimonials />
+       
         <BlogPosts />
         <Pricing />
         <Newsletter />
-        <CTA />
+    
       </main>
       <Footer />
     </div>
