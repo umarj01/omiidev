@@ -87,7 +87,7 @@ export default function Skills() {
                             <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-red-600 to-orange-600 shadow-lg shadow-red-500/30">
                                 <Shield className="h-6 w-6 text-white" />
                             </div>
-                            <h3 className="text-2xl font-bold text-white md:text-3xl">
+                            <h3 className="text-2xl font-bold m-4 text-white md:text-3xl">
                                 Cyber Security
                             </h3>
                         </div>
