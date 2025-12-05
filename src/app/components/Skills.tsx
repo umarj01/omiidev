@@ -1,5 +1,7 @@
 "use client";
 
+
+
 import {
     Code2,
     Palette,
@@ -25,13 +27,13 @@ import {
 // Web Development Skills - Enhanced with better arrangement
 const webDevSkills = [
     { name: "React", icon: Box, size: "large", color: "from-cyan-400 to-blue-500", level: "Advanced" },
-    { name: "Next.js", icon: Workflow, size: "large", color: "from-slate-600 to-slate-800", level: "Advanced" },
+    { name: "Next.js", icon: Workflow, size: "large", color: "from-slate-600 to-white", level: "Advanced" },
     { name: "JavaScript", icon: Code2, size: "large", color: "from-yellow-400 to-orange-500", level: "Expert" },
     { name: "TypeScript", icon: Code2, size: "medium", color: "from-blue-600 to-indigo-600", level: "Advanced" },
     { name: "Tailwind CSS", icon: Zap, size: "medium", color: "from-sky-400 to-blue-600", level: "Expert" },
     { name: "HTML5", icon: Globe, size: "small", color: "from-orange-500 to-red-500", level: "Expert" },
     { name: "CSS3", icon: Palette, size: "small", color: "from-blue-500 to-cyan-500", level: "Expert" },
-    { name: "GitHub", icon: Github, size: "small", color: "from-gray-600 to-gray-800", level: "Advanced" },
+    { name: "GitHub", icon: Github, size: "small", color: "from-gray-600 to-white", level: "Advanced" },
     { name: "Figma", icon: Figma, size: "small", color: "from-purple-500 to-pink-500", level: "Intermediate" },
     { name: "Webflow", icon: Globe, size: "small", color: "from-blue-500 to-purple-500", level: "Intermediate" },
 ];
@@ -57,6 +59,7 @@ const sysAdminSkills = [
 ];
 
 export default function Skills() {
+
     return (
         <section className="relative overflow-hidden bg-slate-950 py-20">
             <div className="relative z-10 px-4 md:px-6">
@@ -77,6 +80,15 @@ export default function Skills() {
                             A diverse toolkit spanning development, security, and infrastructure
                         </p>
                     </div>
+
+ <div className="flex items-center justify-center">
+    <ul className="flex gap-4 ">
+     <button className="bg-slate-800 p-2 rounded-full" >All Skils</button>
+     <button className="bg-slate-800 p-2 rounded-full" >Cyber Security</button>
+        <button className="bg-slate-800 p-2 rounded-full" >Cyber Security</button>
+        <button className="bg-slate-800 p-2 rounded-full">System Admin</button>
+    </ul>
+ </div>
 
                     {/* Web Development Section - Floating 3D Code Cards */}
                     <div className="mb-20">
@@ -166,7 +178,7 @@ export default function Skills() {
                                                                 <span className="text-blue-400">proficiency</span>
                                                                 <span className="text-slate-400">=</span>
                                                                 <span className={`font-semibold bg-gradient-to-r ${skill.color} bg-clip-text text-transparent`}>
-                                                                    {skill.level === "Expert" ? "100" : skill.level === "Advanced" ? "85" : "70"}%
+                                                                    {skill.level === "Expert" ? "100" : skill.level === "Advanced" ? "89" : "87"}%
                                                                 </span>
                                                             </div>
 
@@ -182,10 +194,10 @@ export default function Skills() {
 
                                                             {/* Tags */}
                                                             <div className="mt-3 flex flex-wrap gap-1.5">
-                                                                <span className={`rounded-md bg-gradient-to-r ${skill.color} px-2 py-0.5 text-[10px] font-medium text-white opacity-80`}>
+                                                                <span className={`rounded-md bg-gradient-to-r ${skill.color} px-2 py-0.5 text-[15px] font-medium text-white opacity-80`}>
                                                                     {isLarge ? "Core" : "Tool"}
                                                                 </span>
-                                                                <span className="rounded-md bg-slate-800 px-2 py-0.5 text-[10px] font-medium text-slate-400">
+                                                                <span className="rounded-md bg-slate-800 px-2 py-0.5 text-[15px] font-medium text-slate-400">
                                                                     {skill.level}
                                                                 </span>
                                                             </div>
@@ -214,8 +226,8 @@ export default function Skills() {
 
                     {/* Cyber Security Section - Hexagonal/Diamond Cards */}
                     <div className="mb-20">
-                        <div className="mb-8 flex items-center gap-3">
-                            <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-red-600 to-orange-600 shadow-lg shadow-red-500/30">
+                        <div className="mb-15 flex items-center gap-3">
+                            <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-purple-600 to-blue-600 shadow-lg shadow-red-500/30">
                                 <Shield className="h-6 w-6 text-white" />
                             </div>
                             <h3 className="text-2xl font-bold m-4 text-white md:text-3xl">

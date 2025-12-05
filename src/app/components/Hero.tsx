@@ -64,7 +64,7 @@ const Hero = () => {
                             <br />
                         </motion.h1>
 
-                        <div className="text-slate-500 font-semibold font-mono ml-1 max-w-xl leading-relaxed">
+                        <div className="text-gray-300 font-medium font-mono  ml-1 max-w-xl leading-relaxed">
                             I create, test, and challenge systems to make them smarter, safer, and stronger.
                             I blend curiosity with discipline — building tools, hardening defenses, and
                             teaching others the mindset to turn problems into progress.

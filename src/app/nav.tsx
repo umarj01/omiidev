@@ -25,7 +25,7 @@ export default function Nav() {
           <Avatar>
             <AvatarImage src="./avatar.jpg"/>
           </Avatar>
-          <Link href="/">Omar Javaid</Link>
+          <Link className="text-blue-400" href="/">{"<"}Omii{"/>"}</Link>
         </div>
 
         {/* Center Navigation (Desktop Only) */}
